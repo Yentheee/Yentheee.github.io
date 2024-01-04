@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>Countdown in Seconden</title>
+<!-- Link naar het externe JavaScript-bestand -->
+<script src="backend.js" defer></script>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<h2>Countdown in Seconden</h2>
+
+<!-- Datum kiezen met een kalender -->
+<label for="userDate">Kies een datum:</label>
+<input type="date" id="userDate">
+
+<!-- Tijd kiezen met een klokje -->
+<label for="userTime">Kies een tijd:</label>
+<input type="time" id="userTime">
+
+<button onclick="startCountdown()">Start Countdown</button>
+
+<p id="countdownResult"></p>
+
+</body>
+</html>
