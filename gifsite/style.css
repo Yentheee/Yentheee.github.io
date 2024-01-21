@@ -5,6 +5,29 @@ body {
     padding: 0;
 }
 
+nav {
+    background-color: #e44d7a; /* Liefdevolle roze achtergrondkleur voor de navigatiebalk */
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Zachte schaduw */
+}
+
+nav button {
+    background-color: #e44d7a; /* Liefdevolle roze achtergrondkleur voor de knoppen */
+    color: #fff; /* Witte tekstkleur voor de knoppen */
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+nav button:hover {
+    background-color: #c73b65; /* Donkerder roze bij hover */
+    color: #fff; /* Witte tekstkleur bij hover */
+}
+
 .container {
     max-width: 800px;
     margin: 0 auto;

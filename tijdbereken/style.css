@@ -1,14 +1,40 @@
 /* styles.css */
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    margin: 40px;
+    margin: 0; /* Verwijder de bovenste marge om ruimte te maken voor de vaste navigatiebalk */
+    padding: 0;
+}
+
+nav {
+    background-color: #007bff;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000; /* Zorg ervoor dat de navigatiebalk bovenaan ligt */
+}
+
+nav button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #0056b3;
 }
 
 h2 {
     color: #333;
     text-align: center;
+    margin-top: 60px; /* Voeg wat ruimte toe bovenaan de h2 om de vaste navigatiebalk te vermijden */
 }
 
 form {
@@ -43,8 +69,8 @@ input[type="time"] {
 }
 
 button {
-    display: block;
-    width: 25%;
+    display: inline-block; /* Maakt de knoppen naast elkaar */
+    width: auto; /* Maakt de breedte automatisch, past zich aan de inhoud aan */
     padding: 10px;
     background-color: #007bff;
     color: #fff;
