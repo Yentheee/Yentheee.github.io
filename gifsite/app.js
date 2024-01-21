@@ -25,9 +25,29 @@ function displayGifs(gifs) {
         img.src = gif.images.fixed_height.url;
         img.alt = gif.title;
         img.classList.add('gif');
+        img.addEventListener('click', () => openModal(gif.images.original.url, gif.title));
 
         gifContainer.appendChild(img);
     });
+}
+
+function openModal(gifUrl, altText) {
+    const modal = document.createElement('div');
+    modal.className = 'modal';
+    modal.innerHTML = `
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img src="${gifUrl}" alt="${altText}">
+        </div>
+    `;
+    document.body.appendChild(modal);
+}
+
+function closeModal() {
+    const modal = document.querySelector('.modal');
+    if (modal) {
+        document.body.removeChild(modal);
+    }
 }
 
 function loadMoreGifs() {
